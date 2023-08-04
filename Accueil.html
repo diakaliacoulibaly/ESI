@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Accueil - École Supérieure d'Informatique</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>École Supérieure d'Informatique</title>
+    <style>
+        body {
+            background-image: url('photo5.jpg');
+            background-size: auto;
+            background-position: center;
+          
+        }
+        .header {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            border-top-color: aqua;
+            color: blue;
+            padding: 40px;
+            background-color: HighlightText;
+        }
+
+        .menu {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: chartreuse;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .logo {
+            font-size: 24px;
+            border-top-color: aqua;
+            color: blue;
+            padding: 40px;
+            background-color: HighlightText;
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .navigation ul li {
+                display: inline;
+                margin-left: 10px;
+            }
+
+                .navigation ul li a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+
+        .hero {
+            text-align: center;
+            margin: 0 auto;
+           
+            padding: 50px 0;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-top-color: aqua;
+            color: blue;
+            padding: 40px;
+            background-color: HighlightText;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+            .cta-button:hover {
+                background-color: #555;
+            }
+
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            padding: 50px 0;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 300px;
+            margin: 0 20px;
+        }
+
+        .parallax {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 1px;
+        }
+        h4 {
+            background-color:aqua;
+        }
+     
+
+        .parallax__layer--back {
+            transform: translateZ(-2px) scale(3);
+            z-index: -1;
+        }
+
+        .parallax__layer--base {
+            transform: translateZ(0);
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">École Supérieure d'Informatique</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Formations</a></li>
+                <li><a href="#">Équipe</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenue dans notre école supérieure d'Informatique (ESI)</h2>
+            <h4>Formations de qualité pour votre avenir</h4>
+            <a href="savoir.html" class="cta-button">En savoir plus</a>
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h3>Formations spécialisées</h3>
+            <p>Nos formations sont conçues pour répondre aux besoins du marché du travail.</p>
+        </div>
+        <div class="feature">
+            <h3>Équipe qualifiée</h3>
+            <p>Nous avons une équipe d'enseignants expérimentés et passionnés.</p>
+        </div>
+        <div class="feature">
+            <h3>Infrastructure moderne</h3>
+            <p>Profitez de nos installations modernes et équipements de pointe.</p>
+        </div>
+    </section>
+    <div class="footer">
+        <p>Tous droits réservés &copy; École Supérieure d'Informatique</p>
+    </div>
+</body>
+</html>

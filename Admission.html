@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission à l'Ecole supérieure D'Informatique</title>
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        textarea {
+            color: floralwhite;
+            padding: 15px;
+            background-color: tomato;
+            margin: 15px;
+        }
+        input {
+           color:floralwhite;
+           padding:15px;
+          background-color:tomato;
+          margin:15px;
+        }
+
+        form {
+            border:60px outset black;
+            border:60px outset tomato;
+            margin:60px;
+            overflow-clip-margin:5px;
+        }
+
+       .container {
+            color: blue;
+            background-image: url('photo8.jpg');
+            background-size: auto;
+            background-position: center;
+            display: block;
+            margin-bottom: 5px;
+            padding: 40px;
+            text-align: center;
+        }
+        .job {
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 50px;
+            background-repeat: no-repeat;
+            background-size: auto;
+            font-size: 50px;
+        }
+        .footer {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: chartreuse;
+        }
+        h1 {
+            background-color:snow;
+        }
+            .form-group input {
+                width: 90%;
+                padding: 10px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+
+            }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+            .btn:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaire d'admission</h1>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <div class="form-group">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+        <div class="form-group">
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance" required><br>
+
+            <label for="genre">Genre :</label>
+            <select id="genre" name="genre" required>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+                <option value="autre">Autre</option>
+            </select><br>
+        </div>
+        <div class="form-group">
+            <label for="ville">Ville :</label>
+            <input type="text" id="ville" name="ville" required>
+        </div>
+        <div class="form-group">
+            <label for="codepostal">Code Postal :</label>
+            <input type="text" id="codepostal" name="codepostal" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+        </div>
+        <div class="form-group">
+            <label for="adresse">Numero INE :</label>
+            <input type="text" id="adresse" name="adresse" required>
+        </div>
+        <div class="form-group">
+            <label for="diplome">Type de diplome :</label>
+            <select id="genre" name="serie" required>
+                <option value="BAC C">BAC C</option>
+                <option value="BAC D">BAC D</option>
+                <option value="autre">BAC E</option>
+            </select><br>
+        </div>
+        <div class="form-group">
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>>
+        </div>
+        <label for="lettre-motivation">Lettre de motivation :</label>
+        <textarea id="lettre-motivation" cols="80" rows="5" name="lettre-motivation" required>Saisissez votre lettre de motivation ici.</textarea>
+        <input type="submit" value="Envoyer" class="btn">
+    </form>
+    </div>
+    <h2>
+        NB:Le formulaire ci-dessus est celui d'inscription.Une fois l'Etudiant s'inscrit un message d'admissibilité va lui parvenir dans sa boite email .
+        En cas d'erreur l'Etudiant en question est prié de recommencer la procédure apres une durée de 23h59mn.
+    </h2>
+    <div class="job">
+        <p id="demo"></p>
+        <p id="A"></p>
+        <p id="B"></p>
+    </div>
+    <script>
+        setInterval(() => {
+
+            var day;
+
+            var y = (new Date().getFullYear());
+            var m = (new Date().getMonth());
+            var d = (new Date().getDay());
+            m++;
+            var h = (new Date().getHours());
+            var mi = (new Date().getMinutes());
+            var s = (new Date().getSeconds());
+            var ms = (new Date().getMilliseconds());
+
+            if (h < 10) { h = "0" + h };
+            if (mi < 10) { mi = "0" + mi };
+            if (s < 10) { s = "0" + s };
+            if (ms < 10) { ms = "0" + ms };
+
+            if (m < 10) { m = "0" + m };
+            if (d < 10) { d = "0" + d };
+
+            switch (new Date().getDay()) {
+                case 0:
+                    day = "dimanche";
+                    document.getElementById("demo").style.color = "red";
+                    break;
+
+                case 1:
+                    day = "lundi";
+                    document.getElementById("demo").style.color = "green";
+                    break;
+                case 2:
+                    day = "Mardi";
+                    document.getElementById("demo").style.color = "white"
+                    break;
+
+                case 3:
+                    day = "Mercredi";
+                    document.getElementById("demo").style.color = "blue";
+                    break;
+
+                case 4:
+                    day = "Jeudi";
+                    document.getElementById("demo").style.color = "white";
+                    break;
+
+                case 5:
+                    day = "Vendredi";
+                    document.getElementById("demo").style.color = "black";
+                    break;
+
+                case 6:
+                    day = "Samedi";
+                    document.getElementById("demo").style.color = "gray";
+                    break;
+            }
+            document.getElementById("demo").innerHTML = "Nous sommes au:" + day;
+            document.getElementById("A").innerHTML = + d+" - "+m+" - "+y;
+            document.getElementById("B").innerHTML = "Il est :  " + h + "h " + mi + "mins " + s + "s " + ms + "ms";
+        })
+    </script>
+    <div class="footer">
+        <p>Tous droits réservés &copy; École Supérieure d'Informatique</p>
+    </div>
+</body>
+</html>
+   
